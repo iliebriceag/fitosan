@@ -4,7 +4,7 @@
     <router-view>
     </router-view>
   </div>
-  <CartBtn/>
+  <CartBtn />
   <ContactBtn />
   <scrollToTop />
   <Footer />
@@ -19,11 +19,6 @@ import CartBtn from './components/CartBtn.vue'
 
 
 export default {
-  data() {
-    return {
-      // 
-    }
-  },
   components: {
     Navbar,
     Footer,

@@ -20,14 +20,19 @@
                             <i class="bi bi-cart2 me-2"></i><small>Adaugă în
                                 coș</small>
                         </button>
-                        <div class="overlay" v-else>
-                            <div class="center">
-                                <h2 class="text-center text-white indisponibil">Indisponibil</h2>
-                                <button type="button" class="btn my-btn" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal"><i class="bi bi-cart2 me-2"></i><small>Anunță-mă când
-                                        este în
-                                        stock</small>
-                                </button>
+                        <div v-else>
+                            <button class="disabled">
+                                <i class="bi bi-cart2 me-2"></i><small>Indisponibil</small>
+                            </button>
+                            <div class="overlay">
+                                <div class="center">
+                                    <button type="button" class="btn my-btn" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal"><i class="bi bi-cart2 me-2"></i><small>Anunță-mă
+                                            când
+                                            este în
+                                            stock</small>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -35,7 +40,9 @@
             </div>
 
         </div>
-        <button href="#" class="more d-flex justify-content-center align-items-center" @click="data.productsPromVisible += data.step" v-if="data.productsPromVisible < data.products.length"><small>Vezi mai multe</small></button>
+        <button href="#" class="more d-flex justify-content-center align-items-center"
+            @click="data.productsPromVisible += data.step"
+            v-if="data.productsPromVisible < data.products.length"><small>Vezi mai multe</small></button>
     </div>
 </template>
 

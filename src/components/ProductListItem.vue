@@ -16,13 +16,18 @@
                     <i class="bi bi-cart2 me-2"></i><small>Adaugă în
                         coș</small>
                 </button>
-                <div class="overlay" v-else>
-                    <div class="center">
-                        <h2 class="text-center text-white indisponibil">Indisponibil</h2>
-                        <button type="button" class="btn my-btn" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal"><i class="bi bi-cart2 me-2"></i><small>Anunță-mă când este în
-                                stock</small>
-                        </button>
+                <div v-else>
+                    <button class="disabled">
+                        <i class="bi bi-cart2 me-2"></i><small>Indisponibil</small>
+                    </button>
+                    <div class="overlay">
+                        <div class="center">
+                            <button type="button" class="btn my-btn" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="bi bi-cart2 me-2"></i><small>Anunță-mă când
+                                    este în
+                                    stock</small>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,7 +137,8 @@ const data = useShoppingStore();
 .card img {
     display: block;
     margin: auto;
-    height: 250px;    /* de sters dupa stabilire dimensiune in back  */ 
+    height: 250px;
+    /* de sters dupa stabilire dimensiune in back  */
 }
 
 .modal-content {
