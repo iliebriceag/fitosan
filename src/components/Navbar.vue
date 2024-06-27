@@ -46,7 +46,7 @@
                             aria-expanded="false">
                             Categorii
                         </a>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu .menu-drop-anm">
                             <a class="item" href="#news"><img src="../assets/categories-images/seed-bag.png"
                                     alt="">Semințe de legume</a>
                             <a class="item" href="#news"><img src="../assets/categories-images/fertilize.png"
@@ -320,6 +320,7 @@
 
 
 @media only screen and (max-width : 991px) {
+
     .dropdown-menu {
         overflow: hidden;
         overflow-y: auto;
@@ -349,6 +350,7 @@
         right: 0;
         height: 100vh;
         padding-top: 10%;
+        transition: all .5s;
 
         .nav-item {
             opacity: 0;
