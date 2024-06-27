@@ -41,12 +41,12 @@
                             aria-label="Search">
                         <button class="btn d-flex align-items-center search-btn"><i class="bi bi-search"></i></button>
                     </div>
-                    <li class="nav-item dropdown">
+                    <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Categorii
                         </a>
-                        <ul class="dropdown-menu">
+                        <div class="dropdown-menu">
                             <a class="item" href="#news"><img src="../assets/categories-images/seed-bag.png"
                                     alt="">Semințe de legume</a>
                             <a class="item" href="#news"><img src="../assets/categories-images/fertilize.png"
@@ -69,8 +69,8 @@
                                 grădină</a>
                             <a class="item" href="#news"><img src="../assets/categories-images/watering-can.png"
                                     alt="">Utilaje Agricole</a>
-                        </ul>
-                    </li>
+                        </div>
+                    </div>
                     <div class="nav-item">
                         <router-link class="nav-link text-white" to="/consultanta"
                             @click="visible = !visible, navOpen = !navOpen, scrollToTop()">consultanță</router-link>
@@ -89,10 +89,11 @@
                     </div>
                     <div class="mobile">
 
-                        <div><i class="bi bi-geo-alt-fill px-1"></i>Str. Ștefan Cel Mare, Nr. 577, Matca, Jud. Galați
+                        <div class="nav-item"><i class="bi bi-geo-alt-fill px-1"></i>Str. Ștefan Cel Mare, Nr. 577,
+                            Matca, Jud. Galați
                         </div>
-                        <div><i class="bi bi-telephone-fill px-1"></i>+01 2345 6789</div>
-                        <div><i class="bi bi-envelope-fill px-1"></i>contact@VallAgroPlant.ro</div>
+                        <div class="nav-item"><i class="bi bi-telephone-fill px-1"></i>+01 2345 6789</div>
+                        <div class="nav-item"><i class="bi bi-envelope-fill px-1"></i>contact@VallAgroPlant.ro</div>
 
 
                     </div>
@@ -106,6 +107,7 @@
 .dropdown-menu {
     min-width: 230px;
 }
+
 .dropdown-menu a {
     color: #333;
     text-align: center;
@@ -118,14 +120,17 @@
     align-items: center;
     font-size: .8rem;
 }
+
 .dropdown-menu a:hover {
     background-color: var(--primaryColor);
     color: white;
 }
+
 .dropdown-menu a img {
     height: 25px;
     margin-right: 5px;
 }
+
 .logo {
     color: white;
     font-weight: 800;
@@ -137,7 +142,6 @@
 
 .search {
     border-radius: 30px;
-    // width: 100%;
 }
 
 .nav-serach {
@@ -161,9 +165,6 @@
     padding: 5px 0 5px 0;
 }
 
-// .nav-pills .nav-link {
-//     width: 200px;
-// }
 .product a:hover {
     background-color: var(--primaryColor);
     border-radius: 3px
@@ -183,9 +184,6 @@
     cursor: pointer;
 }
 
-// .active {
-//     background: var(--primaryColor);
-// }
 .search-btn {
     background: var(--primaryColor);
     text-decoration: none;
@@ -268,41 +266,12 @@
 
 .navbar-nav {
     text-transform: uppercase;
-
-}
-
-@media only screen and (max-width : 991px) {
-    .navbar-collapse {
-        background: rgba(0, 0, 0, 0.9);
-        border-radius: 10px;
-    }
-
-    .navbar-nav {
-        padding: 20px;
-    }
-
-    .navbar {
-        height: 50px;
-    }
-
-    .menu {
-        margin-top: -10px;
-    }
-}
-
-@media only screen and (min-width : 992px) {
-    .hamburger__btn {
-        display: none;
-    }
-
-    .mobile {
-        display: none;
-    }
 }
 
 .mobile {
     color: white;
     font-size: .8rem;
+    margin-top: 150px;
 }
 
 .mobile a {
@@ -319,20 +288,6 @@
     }
 }
 
-// .dropdown:hover .dropdown-menu {
-//     display: block;
-//     margin-top: 0;
-// }
-
-// .dropdown-menu {
-//     border: 0;
-//     background: rgba(0, 0, 0, 0.9);
-// }
-
-.dropdown-item:hover {
-    background: transparent;
-    color: var(--primaryColor) !important;
-}
 
 .nav-link,
 .dropdown-item {
@@ -362,35 +317,101 @@
     }
 }
 
-.dropdown-menu {
-    overflow: hidden;
-    overflow-y: auto;
-    max-height: calc(100vh - 150px);
-}
 
-.megamenu .title {
-    background-color: var(--primaryColor);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 30px;
-    cursor: pointer;
-}
 
-@media all and (min-width: 992px) {
-
-    .navbar .has-megamenu {
-        position: static;
+@media only screen and (max-width : 991px) {
+    .dropdown-menu {
+        overflow: hidden;
+        overflow-y: auto;
+        max-height: calc(100vh - 150px);
     }
 
-    .navbar .megamenu {
-        padding: 10px;
+    .navbar-nav {
+        padding: 20px;
+    }
+
+    .navbar {
+        height: 50px;
+    }
+
+    .menu {
+        margin-top: -10px;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 0;
         left: 0;
         right: 0;
-        width: 100%;
-        top: 80px;
+        height: 100vh;
+        padding-top: 10%;
+
+        .nav-item {
+            opacity: 0;
+            transition: opacity 0.4s cubic-bezier(0.58, 0.3, 0.005, 1);
+            padding: 0;
+
+            .nav-link {
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
     }
 
+    .show {
+        visibility: visible;
+        opacity: 1;
+        z-index: 9;
+
+
+        .nav-item {
+            opacity: 1;
+
+            &:nth-child(1) {
+                transition-delay: 0.05s;
+            }
+
+            &:nth-child(2) {
+                transition-delay: 0.15s;
+            }
+
+            &:nth-child(3) {
+                transition-delay: 0.25s;
+            }
+
+            &:nth-child(4) {
+                transition-delay: 0.35s;
+            }
+
+            &:nth-child(5) {
+                transition-delay: 0.45s;
+            }
+
+            &:nth-child(6) {
+                transition-delay: 0.55s;
+            }
+
+            &:nth-child(7) {
+                transition-delay: 0.65s;
+            }
+
+            &:nth-child(8) {
+                transition-delay: 0.75s;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width : 992px) {
+    .hamburger__btn {
+        display: none;
+    }
+
+    .mobile {
+        display: none;
+    }
 }
 </style>
 
