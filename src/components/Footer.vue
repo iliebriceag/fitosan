@@ -11,7 +11,7 @@
                     </div>
                     <div class="d-flex mb-2">
                         <i class="bi bi-envelope-open text-white me-2"></i>
-                        <p class="text-white mb-0">contact@fitosan.ro</p>
+                        <p class="text-white mb-0">contact@VallAgroPlant.ro</p>
                     </div>
                     <div class="d-flex mb-2">
                         <i class="bi bi-telephone text-white me-2"></i>
@@ -50,7 +50,7 @@
     </div>
     <div class="container-fluid bg-dark text-white py-4">
         <div class="container text-center">
-            <p class="mb-0">&copy; <a class="text-secondary fw-bold" href="#">FitoSan </a>. Toate drepturile
+            <p class="mb-0">&copy; <a class="text-secondary fw-bold" href="#">VallAgroPlant </a>. Toate drepturile
                 rezervate.
             </p>
         </div>

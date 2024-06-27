@@ -1,9 +1,10 @@
 <template>
-    <MobileSearch />
+  <MobileSearch />
   <div class="announcements">
     <div class="container content">
       <h1 class="animate fadeInRight one">Lorem Ipsum !</h1>
-      <span class="animate fadeInLeft two">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      <span class="text animate fadeInLeft two">Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.
         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
         galley of type and scrambled it to make a type specimen book.</span>
       <div class="animate fadeInRight three" style="margin-top: 15px;"><router-link class="my-btn"
@@ -37,6 +38,12 @@ export default {
 
 .announcements .content {
   margin-top: 20vh;
+}
+
+@media only screen and (max-width: 576px) {
+  .announcements .text {
+    font-size: .8rem;
+  }
 }
 
 .announcements .my-btn {

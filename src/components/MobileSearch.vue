@@ -4,8 +4,8 @@
         <a href="#"><i class="bi bi-facebook"></i></a>
         <a href="#" class="px-3"><i class="bi bi-instagram"></i></a>
         <a href="#" class="px-1"><i class="bi bi-youtube"></i></a>
-        <input class="form-control me-2 ms-2 search" type="search" placeholder="Nume produs.." aria-label="Search">
-        <button class="btn d-flex align-items-center search-btn"><i class="bi bi-search me-1"></i>Caută</button>
+        <input class="form-control me-2 ms-2 search" type="search" placeholder="Caută produs ..." aria-label="Search">
+        <button class="btn d-flex align-items-center search-btn"><i class="bi bi-search"></i></button>
     </div>
 </template>
 

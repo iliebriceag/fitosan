@@ -2,21 +2,21 @@
     <div class="container-fluid">
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 prom-cards mb-4">
 
-            <div class="col p-2 animate fadeInUp one-four" v-for="product in data.visiblePromProducts" :key="product.id"
+            <div class="col p-1 animate fadeInUp one-four" v-for="product in data.visiblePromProducts" :key="product.id"
                 :product="product">
                 <div class="prom" v-if="data.visiblePromProducts.length > 0">
-                    <span class="prom-danger p-2"><i class="bi bi-star-fill me-1"></i><small
+                    <span class="prom-danger p-1"><i class="bi bi-star-fill me-1"></i><small
                             class="me-2"><strong>REDUCERE</strong></small></span>
                     <img :src="product.image" alt="img" class="prom-img">
                     <div class="details">
-                        <h5 class="card-title p-2"><small>{{ product.name }}</small></h5>
+                        <h5 class="card-title p-1"><small>{{ product.name }}</small></h5>
                         <span class="price">Preț: <strong><del>{{ product.price }}</del></strong><strong
                                 class="text-danger ms-2">{{ product.prom }}</strong> Ron</span><br />
 
-                        <p class="card-text p-2 text-muted"><small>{{ product.description }}</small></p>
+                        <p class="card-text p-1 text-muted"><small>{{ product.description }}</small></p>
 
                         <button v-if="product.stock > 0" @click="data.addToCart(product), data.decrementStock(product)"
-                            class="my-btn mt-2">
+                            class="my-btn">
                             <i class="bi bi-cart2 me-2"></i><small>Adaugă în
                                 coș</small>
                         </button>
@@ -40,7 +40,7 @@
             </div>
 
         </div>
-        <button href="#" class="more d-flex justify-content-center align-items-center"
+        <button class="more d-flex justify-content-center align-items-center"
             @click="data.productsPromVisible += data.step"
             v-if="data.productsPromVisible < data.products.length"><small>Vezi mai multe</small></button>
     </div>
@@ -79,7 +79,7 @@
 }
 
 .prom .price {
-    margin-left: 8px;
+    margin-left: 4px;
 }
 
 .prom .details {
@@ -90,19 +90,36 @@
     width: 100%;
     border-top-right-radius: 20px;
     height: 250px;
-    /* de sters dupa stabilire dimensiune in back  */
 }
 
-@media only screen and (max-width: 512px) {
+@media only screen and (max-width: 576px) {
 
-    /* de sters dupa stabilire dimensiune in back  */
     .prom-img {
-        /* de sters dupa stabilire dimensiune in back  */
-        height: 200px;
-        /* de sters dupa stabilire dimensiune in back  */
+        height: 150px;
     }
 
-    /* de sters dupa stabilire dimensiune in back  */
+    .prom-cards .card-text {
+        font-size: .8rem;
+        height: 45px;
+    }
+
+    .prom-cards .card-title {
+        font-size: 1rem;
+    }
+
+    .prom-cards .price {
+        font-size: .9rem;
+    }
+
+    .my-btn {
+        font-size: .8rem;
+    }
+
+    .disabled {
+        font-size: .8rem;
+        padding: 5px 10px;
+    }
+
 }
 
 
@@ -160,6 +177,24 @@
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+}
+
+.more {
+    display: block;
+    margin: auto;
+    border: 2px solid var(--primaryColor);
+    background-color: white;
+    color: var(--primaryColor);
+    text-decoration: none;
+    border-radius: 30px;
+    width: 200px;
+    height: 40px;
+}
+
+.more:hover {
+    background-color: var(--primaryColor);
+    color: white;
+    transition: all .3s;
 }
 </style>
 

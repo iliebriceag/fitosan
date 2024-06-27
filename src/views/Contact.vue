@@ -12,20 +12,20 @@
                                 class="text-muted mobil"><a href="tel:0721 234 567">012 345 67 89</a></span>
                         </div>
                         <div class="line"><i class="bi bi-envelope-fill px-1"></i>E-Mail: <span
-                                class="text-muted mobil"><a href="mailto:office@itschool.ro">contact@fitosan.ro</a></span>
+                                class="text-muted mobil"><a href="mailto:office@itschool.ro">contact@VallAgroPlant.ro</a></span>
                         </div>
                         <div class="line"><i class="bi bi-geo-alt-fill px-1"></i>Adresa: <span
                                 class="text-muted mobil"><a
                                     href="http://maps.google.com/?q=Str. Capitan Eremia Popescu, Nr. 27">Str. Ștefan Cel Mare, Nr. 577, Matca, Jud. Galați</a></span>
                         </div>
                         <div class="line"><i class="bi bi-facebook px-1"></i>Facebook: <span class="text-muted mobil"><a
-                                    href="https://www.facebook.com/">/FitoSan</a></span>
+                                    href="https://www.facebook.com/">/VallAgroPlant</a></span>
                         </div>
                         <div class="line"><i class="bi bi-instagram px-1"></i>Instagram: <span
-                                class="text-muted mobil"><a href="https://www.instagram.com/">/FitoSan</a></span>
+                                class="text-muted mobil"><a href="https://www.instagram.com/">/VallAgroPlant</a></span>
                         </div>
                         <div class="line"><i class="bi bi-youtube px-1"></i>Youtube: <span
-                                class="text-muted mobil"><a href="https://www.youtube.com/">/FitoSan</a></span>
+                                class="text-muted mobil"><a href="https://www.youtube.com/">/VallAgroPlant</a></span>
                         </div>
 
                     </div>

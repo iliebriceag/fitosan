@@ -11,7 +11,7 @@
                         577, Matca, Jud. Galați
                     </small>
                     <small class="px-1"><i class="bi bi-telephone px-1"></i>+01 2345 6789</small>
-                    <small class="px-1"><i class="bi bi-envelope-open px-1"></i>contact@fitosan.ro</small>
+                    <small class="px-1"><i class="bi bi-envelope-open px-1"></i>contact@VallAgroPlant.ro</small>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid menu">
             <router-link class="navbar-brand mt-2" to="/" @click="scrollToTop()">
-                <h2 class="logo"><span class="logospan">Fito</span>San</h2>
+                <h2 class="logo"><span class="logospan">VallAgro</span>Plant</h2>
             </router-link>
 
 
@@ -35,76 +35,45 @@
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02" :class="!visible ? 'collapse' : ''">
                 <div class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    
+
                     <div class="nav-item me-4 nav-search d-none d-lg-flex">
-                        <input class="form-control me-2 search" type="search" placeholder="Nume produs.."
+                        <input class="form-control me-2 search" type="search" placeholder="Caută produs ..."
                             aria-label="Search">
-                        <button class="btn d-flex align-items-center search-btn"><i
-                                class="bi bi-search me-1"></i>Caută</button>
+                        <button class="btn d-flex align-items-center search-btn"><i class="bi bi-search"></i></button>
                     </div>
-                    <div class="nav-item dropdown has-megamenu">
-                        <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown"> Categorii /
-                            Produse</a>
-                        <div class="dropdown-menu megamenu text-white">
-
-
-                            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-                                <div class="col">
-                                    <h6 class="title">Categorie</h6>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                </div>
-                                <div class="col">
-                                    <h6 class="title">Categorie</h6>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                </div>
-                                <div class="col">
-                                    <h6 class="title">Categorie</h6>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                </div>
-                                <div class="col">
-                                    <h6 class="title">Categorie</h6>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                    <div class="nav-item"><a class="nav-link text-white" href="#">Produs</a></div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div class="nav-item">
-                        <router-link class="nav-link text-white" to="/info"
-                            @click="visible = !visible, navOpen = !navOpen, scrollToTop()">informatii</router-link>
-                    </div>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Categorii
+                        </a>
+                        <ul class="dropdown-menu">
+                            <a class="item" href="#news"><img src="../assets/categories-images/seed-bag.png"
+                                    alt="">Semințe de legume</a>
+                            <a class="item" href="#news"><img src="../assets/categories-images/fertilize.png"
+                                    alt="">Îngrășăminte</a>
+                            <a class="item" href="#news"><img src="../assets/categories-images/pesticide.png"
+                                    alt="">Pesticide</a>
+                            <a class="item" href="#news"><img src="../assets/categories-images/soil.png" alt="">Substrat
+                                de turbă</a>
+                            <a class="item" href="#news"><img src="../assets/categories-images/bio.png" alt="">Combatere
+                                Biologică</a>
+                            <a class="item" href="#news"><img src="../assets/categories-images/greenhouse.png"
+                                    alt="">Folie</a>
+                            <a class="item" href="#news"><img src="../assets/categories-images/sprinkler.png"
+                                    alt="">Sisteme de irigare</a>
+                            <a class="item" href="#news"><img src="../assets/categories-images/farming.png"
+                                    alt="">Echipamente Solarii</a>
+                            <a class="item" href="#news"><img src="../assets/categories-images/baking-tray.png"
+                                    alt="">Pahare și tăvi (alveole)</a>
+                            <a class="item" href="#news"><img src="../assets/categories-images/home.png" alt="">Casă și
+                                grădină</a>
+                            <a class="item" href="#news"><img src="../assets/categories-images/watering-can.png"
+                                    alt="">Utilaje Agricole</a>
+                        </ul>
+                    </li>
                     <div class="nav-item">
                         <router-link class="nav-link text-white" to="/consultanta"
-                            @click="visible = !visible, navOpen = !navOpen, scrollToTop()">consultanta</router-link>
+                            @click="visible = !visible, navOpen = !navOpen, scrollToTop()">consultanță</router-link>
                     </div>
                     <div class="nav-item">
                         <router-link class="nav-link text-white" to="/program"
@@ -123,7 +92,7 @@
                         <div><i class="bi bi-geo-alt-fill px-1"></i>Str. Ștefan Cel Mare, Nr. 577, Matca, Jud. Galați
                         </div>
                         <div><i class="bi bi-telephone-fill px-1"></i>+01 2345 6789</div>
-                        <div><i class="bi bi-envelope-fill px-1"></i>contact@fitosan.ro</div>
+                        <div><i class="bi bi-envelope-fill px-1"></i>contact@VallAgroPlant.ro</div>
 
 
                     </div>
@@ -134,17 +103,89 @@
 </template>
 
 <style scoped lang="scss">
+.dropdown-menu {
+    min-width: 230px;
+}
+.dropdown-menu a {
+    color: #333;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+}
+.dropdown-menu a:hover {
+    background-color: var(--primaryColor);
+    color: white;
+}
+.dropdown-menu a img {
+    height: 25px;
+    margin-right: 5px;
+}
 .logo {
     color: white;
     font-weight: 800;
 }
+
 .logo .logospan {
     color: var(--primaryColor);
 }
+
 .search {
     border-radius: 30px;
+    // width: 100%;
 }
 
+.nav-serach {
+    width: 100%;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primaryColor) !important;
+    border-radius: 3px;
+}
+
+.product-categ {
+    margin-bottom: 10px;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.16), 0 3px 6px rgba(255, 255, 255, 0.23);
+    padding: 5px;
+}
+
+.product a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 0 5px 0;
+}
+
+// .nav-pills .nav-link {
+//     width: 200px;
+// }
+.product a:hover {
+    background-color: var(--primaryColor);
+    border-radius: 3px
+}
+
+.nav-link:hover {
+    background-color: var(--primaryColor);
+    border-radius: 3px
+}
+
+.title {
+    background-color: var(--primaryColor);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+// .active {
+//     background: var(--primaryColor);
+// }
 .search-btn {
     background: var(--primaryColor);
     text-decoration: none;
@@ -224,10 +265,12 @@
     overflow: visible;
     z-index: 100;
 }
+
 .navbar-nav {
     text-transform: uppercase;
 
 }
+
 @media only screen and (max-width : 991px) {
     .navbar-collapse {
         background: rgba(0, 0, 0, 0.9);
@@ -281,10 +324,10 @@
 //     margin-top: 0;
 // }
 
-.dropdown-menu {
-    border: 0;
-    background: rgba(0, 0, 0, 0.9);
-}
+// .dropdown-menu {
+//     border: 0;
+//     background: rgba(0, 0, 0, 0.9);
+// }
 
 .dropdown-item:hover {
     background: transparent;
@@ -349,8 +392,6 @@
     }
 
 }
-
-
 </style>
 
 <script>
@@ -373,7 +414,7 @@ export default {
             $(window).scroll(function () {
                 var scroll = $(window).scrollTop();
                 if (scroll > 1) {
-                    $(".navbar").css({ "background-color": "#30694bf6", "box-shadow": "0 0 10px 3px rgba(0, 0, 0, 0.192)", "height": "50px", "transition": ".3s" });
+                    $(".navbar").css({ "background-color": "var(--primaryColor)", "box-shadow": "0 0 10px 3px rgba(0, 0, 0, 0.192)", "height": "50px", "transition": ".3s" });
                     $(".search-btn").css({ "background-color": "white", "color": "#333" });
                     $(".logospan").css({ "color": "white" });
                     $(".navbar").addClass("slideIn");

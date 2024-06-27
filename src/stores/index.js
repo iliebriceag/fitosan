@@ -180,7 +180,7 @@ export const useShoppingStore = defineStore('shopping', {
             if (index !== -1) {
                 this.cartItems[index].quantity += 1;
                 
-                this.count++;
+                // this.count++;
 
 
                 Swal.fire({
