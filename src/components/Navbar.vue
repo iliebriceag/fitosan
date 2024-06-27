@@ -167,12 +167,16 @@
 
 .product a:hover {
     background-color: var(--primaryColor);
-    border-radius: 3px
+    border-radius: 30px
+}
+
+.nav-link {
+    border-radius: 30px
 }
 
 .nav-link:hover {
     background-color: var(--primaryColor);
-    border-radius: 3px
+    border-radius: 30px
 }
 
 .title {
