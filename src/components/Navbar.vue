@@ -162,7 +162,7 @@
 .product a {
     text-decoration: none;
     color: white;
-    padding: 5px 0 5px 0;
+    padding: 3px 0 3px 0;
 }
 
 .product a:hover {
@@ -324,6 +324,8 @@
         overflow: hidden;
         overflow-y: auto;
         max-height: calc(100vh - 150px);
+        background: rgba(0, 0, 0, 0.9);
+        // font-size: .7rem;
     }
 
     .navbar-nav {
@@ -355,7 +357,7 @@
 
             .nav-link {
                 color: white;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
         }
     }
