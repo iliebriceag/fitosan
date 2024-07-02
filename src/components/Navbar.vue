@@ -47,28 +47,10 @@
                             Categorii
                         </a>
                         <div class="dropdown-menu .menu-drop-anm">
-                            <a class="item" href="#news"><img src="../assets/categories-images/seed-bag.png"
-                                    alt="">Semințe de legume</a>
-                            <a class="item" href="#news"><img src="../assets/categories-images/fertilize.png"
-                                    alt="">Îngrășăminte</a>
-                            <a class="item" href="#news"><img src="../assets/categories-images/pesticide.png"
-                                    alt="">Pesticide</a>
-                            <a class="item" href="#news"><img src="../assets/categories-images/soil.png" alt="">Substrat
-                                de turbă</a>
-                            <a class="item" href="#news"><img src="../assets/categories-images/bio.png" alt="">Combatere
-                                Biologică</a>
-                            <a class="item" href="#news"><img src="../assets/categories-images/greenhouse.png"
-                                    alt="">Folie</a>
-                            <a class="item" href="#news"><img src="../assets/categories-images/sprinkler.png"
-                                    alt="">Sisteme de irigare</a>
-                            <a class="item" href="#news"><img src="../assets/categories-images/farming.png"
-                                    alt="">Echipamente Solarii</a>
-                            <a class="item" href="#news"><img src="../assets/categories-images/baking-tray.png"
-                                    alt="">Pahare și tăvi (alveole)</a>
-                            <a class="item" href="#news"><img src="../assets/categories-images/home.png" alt="">Casă și
-                                grădină</a>
-                            <a class="item" href="#news"><img src="../assets/categories-images/watering-can.png"
-                                    alt="">Utilaje Agricole</a>
+                            <div v-for="item in categories" :key="item.id">
+                                <a class="item" href="#news"><img :src="`${item.imagine}`" alt="">{{ item.categorie
+                                    }}</a>
+                            </div>
                         </div>
                     </div>
                     <div class="nav-item">
@@ -424,6 +406,7 @@
 </style>
 
 <script>
+import axios from 'axios'
 import $ from 'jquery'
 export default {
     name: 'navbar',
@@ -431,12 +414,15 @@ export default {
         return {
             visible: false,
             navOpen: false,
+            categories: []
         }
     },
-    methods: {
-        scrollToTop() {
-            window.scrollTo(0, 0)
-        }
+    mounted() {
+        axios
+            .get('http://localhost:3000/api/categories')
+            .then(response => {
+                this.categories = response.data
+            })
     },
     created() {
         $(document).ready(function () {

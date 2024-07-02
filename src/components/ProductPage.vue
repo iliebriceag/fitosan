@@ -1,13 +1,17 @@
 <template>
-<img :src="product.image" class="card-img-top" alt="..." />
-            <span class="price"><strong>{{ product.price }}</strong> Ron
-            </span>
-</template>
+<div>
+{{ $route.params.id }}
 
+<div>
+    {{  }}
+</div>
+
+</div>
+</template>
 
 <script setup>
 import { useShoppingStore } from '../stores'
-//get props
+// //get props
 const props = defineProps({
     product: {
         type: Object,
@@ -17,3 +21,4 @@ const props = defineProps({
 //get store
 const data = useShoppingStore();
 </script>
+

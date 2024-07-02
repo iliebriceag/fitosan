@@ -1,45 +1,48 @@
 <template>
-    <div class="what-title text-center h2 fw-bolder p-4 mt-4">Produse</div>
+    <div class="what-title text-center h2 fw-bolder p-4 mt-4">Toate produsele</div>
     <div class="container-fluid">
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 product-cards mb-4">
 
-            <div class="col p-1 animate fadeInUp one-four" v-for="product in data.visibleProducts" :key="product.id"
+            <div class="col p-1 animate fadeInUp one-four" v-for="product in visibleProducts" :key="product.id"
                 :product="product">
-                <div class="product" v-if="data.visibleProducts.length > 0">
-                    <span class="product-price p-1"><small class="me-2"><strong>{{ product.price }}
-                                Ron</strong></small></span>
-                    <img :src="product.image" alt="img" class="product-img">
-                    <div class="details">
-                        <h5 class="card-title p-1"><small>{{ product.name }}</small></h5>
-                        <p class="card-text p-1 text-muted"><small>{{ product.description }}</small></p>
+                <router-link :to="`/produs/${product.id}`" class="text-decoration-none">
+                    <div class="product" v-if="data.visibleProducts.length > 0">
+                        <span class="product-price p-1"><small class="me-2"><strong>{{ product.price }}
+                                    Ron</strong></small></span>
+                        <img :src="product.image" alt="img" class="product-img">
+                        <div class="details">
+                            <h5 class="card-title p-1"><small>{{ product.name }}</small></h5>
+                            <p class="card-text p-1 text-muted"><small>{{ product.description }}</small></p>
 
-                        <button v-if="product.stock > 0" @click="data.addToCart(product), data.decrementStock(product)"
-                            class="my-btn">
-                            <i class="bi bi-cart2 me-2"></i><small>Adaugă în
-                                coș</small>
-                        </button>
-                        <div v-else>
-                            <button class="disabled">
-                                <i class="bi bi-cart2 me-2"></i><small>Indisponibil</small>
+                            <button v-if="product.stock > 0"
+                                @click="data.addToCart(product), data.decrementStock(product)" class="my-btn">
+                                <i class="bi bi-cart2 me-2"></i><small>Adaugă în
+                                    coș</small>
                             </button>
-                            <div class="overlay">
-                                <div class="center">
-                                    <button type="button" class="btn my-btn" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal"><i class="bi bi-cart2 me-2"></i><small>Anunță-mă
-                                            când
-                                            este în
-                                            stock</small>
-                                    </button>
+                            <div v-else>
+                                <button class="disabled">
+                                    <i class="bi bi-cart2 me-2"></i><small>Indisponibil</small>
+                                </button>
+                                <div class="overlay">
+                                    <div class="center">
+                                        <button type="button" class="btn my-btn" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"><i
+                                                class="bi bi-cart2 me-2"></i><small>Anunță-mă
+                                                când
+                                                este în
+                                                stock</small>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </router-link>
+
             </div>
 
         </div>
-        <button class="more d-flex justify-content-center align-items-center"
-            @click="data.productsVisible += data.step"
+        <button class="more d-flex justify-content-center align-items-center" @click="data.productsVisible += data.step"
             v-if="data.productsVisible < data.products.length"><small>Vezi mai multe</small></button>
     </div>
 </template>
@@ -52,7 +55,9 @@
     min-height: 300px;
 }
 
-
+.product:hover .card-title{
+    text-decoration: underline;
+}
 
 .product-cards .product {
     background-color: whitesmoke;
@@ -191,25 +196,21 @@
 }
 </style>
 
-<!-- <script>
-import { useShoppingStore } from '../stores'
-
-export default {
-    
-    data() {
-        return {
-            displayPropProduct: true
-        }
-    },
-    // created() {
-    //     if (product.prom !== null) {
-    //         this.displayPropProduct = true;
-    //     }
-    // }
-}
-</script> -->
-
 <script setup>
+import { ref, onMounted, computed } from "vue";
+import { useShoppingStore } from "../stores";
+const data = useShoppingStore();
+
+const visibleProducts = computed(() => {
+  return data.visibleProducts;
+});
+// mounted
+onMounted(() => {
+    data.fetchProducts();
+});
+</script>
+
+<!-- <script setup>
 import { useShoppingStore } from '../stores'
 //get props
 const props = defineProps({
@@ -220,4 +221,4 @@ const props = defineProps({
 });
 //get store
 const data = useShoppingStore();
-</script>
+</script> -->

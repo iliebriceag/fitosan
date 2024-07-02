@@ -198,33 +198,8 @@
 }
 </style>
 
-<!-- <script>
-import { useShoppingStore } from '../stores'
-
-export default {
-    
-    data() {
-        return {
-            displayPropProduct: true
-        }
-    },
-    // created() {
-    //     if (product.prom !== null) {
-    //         this.displayPropProduct = true;
-    //     }
-    // }
-}
-</script> -->
 
 <script setup>
 import { useShoppingStore } from '../stores'
-//get props
-const props = defineProps({
-    product: {
-        type: Object,
-        required: true
-    }
-});
-//get store
 const data = useShoppingStore();
 </script>
